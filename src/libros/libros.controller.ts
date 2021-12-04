@@ -1,9 +1,10 @@
 import { LibrosService } from './libros.service';
 import { Controller, Post, Get, Put, Delete, Body, Param } from '@nestjs/common';
 import { crearLibroDto } from './dto/crear-libro';
+import { ApiTags } from '@nestjs/swagger';
 
 
-
+@ApiTags('libros')
 @Controller('libros')
 export class LibrosController {
 
