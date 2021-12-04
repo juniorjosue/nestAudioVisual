@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { Libro } from './libros/entities/libro.entity';
 import { LibrosController } from './libros/libros.controller';
 import { LibrosService } from './libros/libros.service';
+import { PeliculaModule } from './pelicula/pelicula/pelicula.module';
 
 
 @Module({
@@ -20,7 +21,8 @@ import { LibrosService } from './libros/libros.service';
       synchronize: true,
       logging:false
     }),
-    TypeOrmModule.forFeature([Libro])
+    TypeOrmModule.forFeature([Libro]),
+    PeliculaModule
   ],
   controllers: [AppController, LibrosController],
   providers: [AppService, LibrosService],
