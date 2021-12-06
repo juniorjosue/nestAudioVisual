@@ -4,35 +4,11 @@ import { crearLibroDto } from './dto/crear-libro';
 import { ApiTags } from '@nestjs/swagger';
 
 
-@ApiTags('libros')
+@ApiTags('libros') 
 @Controller('libros')
 export class LibrosController {
 
-    // @Get()
-    // @Post()
-    // @Put()
-    // @Delete()
    
-    /*prueba mostrando solo texto para verlo en el postman*/
-   /* @Get()
-    Todoslibros(): string{
-        return 'libros';
-    }    
-    @Post()
-    Crearlibros(): string{
-        return "Creado el libros";
-    }
-    @Put()
-    Modificarlibros(): string{
-        return "modificado el libros";
-    }
-    @Delete()
-    Borrarlibros(): string{
-        return "borrado el libros";
-    }*/
-
-    /*para tener disponible el service
-     */
 
     constructor(private readonly LibrosService:LibrosService){}
     /*para buscar*/
